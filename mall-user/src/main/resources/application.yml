@@ -1,0 +1,27 @@
+spring:
+  #通用数据源配置
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/my_db_mall?useInformationSchema=false&charset=utf8mb4&useSSL=false&allowMultiQueries=true
+    username: root
+    password: 001225
+
+mybatis:
+  mapper-locations: classpath:mapping/*Mapper.xml
+  type-aliases-package: com.example.mall.user.model
+
+# 显示SQL语句部分
+logging:
+  level:
+    com:
+      example:
+        mall:
+          user:
+            mapper: debug
+
+feign:
+  client:
+    config:
+      default:
+        connect-timeout: 5000
+        read-timeout: 5000
