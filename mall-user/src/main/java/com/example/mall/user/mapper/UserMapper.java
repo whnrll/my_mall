@@ -2,6 +2,7 @@ package com.example.mall.user.mapper;
 
 import com.example.mall.user.model.UserDO;
 import org.apache.ibatis.annotations.Mapper;
+import org.springframework.stereotype.Component;
 
 /**
  * 用户Mapper

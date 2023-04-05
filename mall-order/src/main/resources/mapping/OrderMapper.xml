@@ -14,7 +14,7 @@
 
     <insert id="insertOrder" useGeneratedKeys="true" keyProperty="id"
             parameterType="com.example.mall.order.model.OrderDO">
-        insert into `mall-order`.t_order
+        insert into t_order
         (order_no,
          amount,
          status,

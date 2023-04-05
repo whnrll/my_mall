@@ -16,7 +16,7 @@
 
     <insert id="insertCoupon" useGeneratedKeys="true" keyProperty="id"
             parameterType="com.example.mall.coupon.model.CouponDO">
-        insert into `mall-coupon`.t_coupon
+        insert into t_coupon
         (title,
          with_amount,
          used_amount,
@@ -35,18 +35,18 @@
 
     <select id="selectCouponById" parameterType="java.lang.Long" resultMap="BaseResultMap">
         select *
-        from `mall-coupon`.t_coupon
+        from t_coupon
         where id = #{id}
     </select>
 
     <update id="updateCouponTakeCount" parameterType="com.example.mall.coupon.model.CouponDO">
-        update `mall-coupon`.t_coupon
+        update t_coupon
         set take_count = #{takeCount}
         where id = #{id}
     </update>
 
     <update id="updateCouponUsedCount" parameterType="com.example.mall.coupon.model.CouponDO">
-        update `mall-coupon`.t_coupon
+        update t_coupon
         set used_count = #{usedCount}
         where id = #{id}
     </update>

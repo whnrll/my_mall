@@ -1,0 +1,14 @@
+### 添加商品
+POST http://localhost:18081/goods
+Content-Type: application/json
+
+{
+  "id": 1,
+  "name": "restfulToolkitX",
+  "description": "restfulToolkitX",
+  "type": 1,
+  "stock": 1
+}
+
+### 获取商品
+GET http://localhost:18081/goods/1

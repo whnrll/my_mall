@@ -13,7 +13,7 @@
     </resultMap>
 
     <insert id="insertGoods" parameterType="com.example.mall.goods.model.GoodsDO">
-        insert into `mall-goods`.t_goods
+        insert into t_goods
         (name,
          description,
          type,
@@ -28,13 +28,13 @@
 
     <select id="selectGoodsById" parameterType="java.lang.Long" resultMap="BaseResultMap">
         select *
-        from `mall-goods`.t_goods
+        from t_goods
         where id = #{id}
     </select>
 
     <update id="updateGoodsListStock" parameterType="java.util.List">
         <foreach collection="list" item="goods" index="index" open="" close="" separator=";">
-            update `mall-goods`.t_goods
+            update t_goods
             set stock = stock - #{goods.stock}
             where id = #{goods.id}
             and stock >= #{goods.stock}

@@ -13,7 +13,7 @@
 
     <insert id="insertCouponRecord" useGeneratedKeys="true" keyProperty="id"
             parameterType="com.example.mall.coupon.model.CouponRecordDO">
-        insert into `mall-coupon`.t_coupon_record
+        insert into t_coupon_record
         (
             user_id,
             coupon_id,
@@ -29,19 +29,19 @@
 
     <select id="selectCouponRecord" parameterType="com.example.mall.coupon.model.CouponRecordDO" resultMap="BaseResultMap">
         select *
-          from `mall-coupon`.t_coupon_record
+          from t_coupon_record
          where id = #{id}
            and user_id = #{userId}
     </select>
 
     <select id="selectCouponRecordByUserId" parameterType="java.lang.Long" resultMap="BaseResultMap">
         select *
-          from `mall-coupon`.t_coupon_record
+          from t_coupon_record
           where user_id = #{userId}
     </select>
 
     <update id="updateCouponRecordStatus" parameterType="com.example.mall.coupon.model.CouponRecordDO">
-        update `mall-coupon`.t_coupon_record
+        update t_coupon_record
            set status = #{status}
          where id = #{id}
     </update>

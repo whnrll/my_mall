@@ -63,7 +63,7 @@ public class Assert<T> {
      * @return
      */
     public static void successResponse(BaseResponse response) {
-        if(! ResponseEnum.SUCCESS.getCode().equals(response.getCode())) {
+        if (!ResponseEnum.SUCCESS.getCode().equals(response.getCode())) {
             throw new BusinessException(response.getCode(), response.getMessage());
         }
     }

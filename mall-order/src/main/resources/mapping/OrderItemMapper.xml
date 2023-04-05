@@ -12,7 +12,7 @@
     </resultMap>
 
     <insert id="insertOrderItems" parameterType="java.util.List">
-        insert into `mall-order`.t_order_item
+        insert into t_order_item
         (
         order_no,
         goods_id,
